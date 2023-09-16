@@ -166,7 +166,7 @@ def go_gradio(**kwargs):
         instruction_label_nochat = "Instruction (Shift-Enter or push Submit to send message," \
                                    " use Enter for multiple input lines)"
 
-    title = 'h2oGPT'
+    title = 'rsGPT'
     if kwargs['visible_h2ogpt_header']:
         description = """<iframe src="https://ghbtns.com/github-btn.html?user=h2oai&repo=h2ogpt&type=star&count=true&size=small" frameborder="0" scrolling="0" width="280" height="20" title="GitHub"></iframe><small><a href="https://github.com/h2oai/h2ogpt">h2oGPT</a> <a href="https://evalgpt.ai/">LLM Leaderboard</a> <a href="https://github.com/h2oai/h2o-llmstudio">LLM Studio</a><br /><a href="https://codellama.h2o.ai">CodeLlama</a> <br /><a href="https://huggingface.co/h2oai">🤗 Models</a>"""
     else:
@@ -201,7 +201,7 @@ def go_gradio(**kwargs):
                                  radius_size=gr.themes.sizes.spacing_md))
 
     theme = H2oTheme(**theme_kwargs) if kwargs['h2ocolors'] else SoftTheme(**theme_kwargs)
-    demo = gr.Blocks(theme=theme, css=css_code, title="h2oGPT", analytics_enabled=False)
+    demo = gr.Blocks(theme=theme, css=css_code, title="rsGPT", analytics_enabled=False)
     callback = gr.CSVLogger()
 
     model_options0 = flatten_list(list(prompt_type_to_model_name.values())) + kwargs['extra_model_options']
