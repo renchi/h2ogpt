@@ -182,11 +182,12 @@ YouTube 4K version: https://www.youtube.com/watch?v=_iktbj4obAI
     ```
 - Create database
     ```bash
-    python generate.py --base_model=h2oai/h2ogpt-gm-oasst1-en-2048-falcon-7b-v3 --langchain_mode=UserData --score_model=None --visible_h2ogpt_header=False --visible_side_bar=False --visible_system_tab=False --visible_doc_selection_tab=False --visible_doc_view_tab=False --visible_chat_history_tab=False --visible_expert_tab=False --visible_models_tab=False --visible_login_tab=False --h2ocolors=False --share=True 
+	#--chunk_size=2000 
+	python src/make_db.py --use_openai_embedding=True --db_type=chroma
     ```
 - Run ChatGPT
   ```bash
-    python generate.py --base_model=h2oai/h2ogpt-gm-oasst1-en-2048-falcon-7b-v3 --langchain_mode=UserData --score_model=None --visible_h2ogpt_header=False --visible_side_bar=False --visible_system_tab=False --visible_doc_selection_tab=False --visible_doc_view_tab=False --visible_chat_history_tab=False --visible_expert_tab=False --visible_models_tab=False --visible_login_tab=False --h2ocolors=False --share=True 
+    python generate.py --base_model=h2oai/h2ogpt-gm-oasst1-en-2048-falcon-7b-v3 --langchain_mode=UserData --score_model=None --visible_h2ogpt_header=False --visible_side_bar=False --visible_system_tab=False --visible_doc_selection_tab=False --visible_doc_view_tab=False --visible_chat_history_tab=False --visible_expert_tab=False --visible_models_tab=False --visible_login_tab=False --h2ocolors=False --local_files_only=True --gradio_offline_level=1 --share=True
     ```
 ### Help
 
