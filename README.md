@@ -175,6 +175,19 @@ YouTube 4K version: https://www.youtube.com/watch?v=_iktbj4obAI
     ```
   or tweak/run `tests/test4gpus.sh` to run tests in parallel.
 
+### Chito commands
+- Set OpenAI API key to be use for embeddings during database creation:
+    ```bash
+    set OPENAI_API_KEY=
+    ```
+- Create database
+    ```bash
+    python generate.py --base_model=h2oai/h2ogpt-gm-oasst1-en-2048-falcon-7b-v3 --langchain_mode=UserData --score_model=None --visible_h2ogpt_header=False --visible_side_bar=False --visible_system_tab=False --visible_doc_selection_tab=False --visible_doc_view_tab=False --visible_chat_history_tab=False --visible_expert_tab=False --visible_models_tab=False --visible_login_tab=False --h2ocolors=False --share=True 
+    ```
+- Run ChatGPT
+  ```bash
+    python generate.py --base_model=h2oai/h2ogpt-gm-oasst1-en-2048-falcon-7b-v3 --langchain_mode=UserData --score_model=None --visible_h2ogpt_header=False --visible_side_bar=False --visible_system_tab=False --visible_doc_selection_tab=False --visible_doc_view_tab=False --visible_chat_history_tab=False --visible_expert_tab=False --visible_models_tab=False --visible_login_tab=False --h2ocolors=False --share=True 
+    ```
 ### Help
 
 - [FAQs](docs/FAQ.md)
